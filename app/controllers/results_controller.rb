@@ -13,7 +13,7 @@ class ResultsController < ApplicationController
     end
 
     def create
-        result = Result.create(id: params[:id])
+        result = Result.create(id: params[:id], generated_at: params[:generated_at])
 
         render json: result
     end
